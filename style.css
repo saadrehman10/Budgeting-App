@@ -2,9 +2,7 @@
 body {
     margin: 1rem 0rem 0rem 0rem;
     padding: 2rem 0rem 0rem 0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: #32B6A7;
 }
 .top{
     position: relative;
@@ -12,7 +10,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #A15C38;
+    background-color: #264653;
     box-shadow: 0px 0px 10px 0px #000000;
 }
 .top-left{
@@ -20,15 +18,22 @@ body {
     margin: -2rem 0rem -2rem 2rem;
     padding: 0.3rem 2rem 0.3rem 2rem;
     font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Segoe UI',  sans-serif;
+    font-family:  sans-serif;
     color: #ffffff;
     box-shadow: 0px 0px 10px 0px #000000;
-    background-color: #A15C38;
+    background-color: #264653;
     border-radius: 5%;
     
 }
 .top-right{
-    margin: 6rem 1rem 0rem 0rem;
-    font-size: 1.5rem;
+    position: relative;
+    margin: 0rem 3rem 0rem 0rem;
+    padding: 0rem;
+    font-size: 1.6rem !important;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+.bottom{
+    margin: 3rem 0rem 0rem 0rem;    
 }
