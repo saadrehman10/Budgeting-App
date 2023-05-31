@@ -17,9 +17,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0px;
+    border-radius: 0rem;
     background: linear-gradient(315deg, #223f4b, #294b59);
-    box-shadow:  -36px -36px 71px #1b313a, 36px 36px 71px #315b6c;
+    box-shadow:  -2.25rem -2.25rem 4.438rem #1b313a, 2.25rem 2.25rem 4.438rem #315b6c;
 }
 .top-left{
     position: relative;
@@ -29,9 +29,9 @@ body {
     font-family:  sans-serif;
     color: #ffffff;
     text-shadow: 0rem 0rem 2rem #000000;
-    border-radius: 16px;
+    border-radius: 1rem;
     background: linear-gradient(145deg, #223f4b, #294b59);
-    box-shadow:  18px 18px 36px #101d23,-18px -18px 36px #3c6f83;
+    box-shadow:  1.125rem 1.125rem 2.25rem #101d23,-1.125rem -1.125rem 2.25rem #3c6f83;
     
 }
 .top-right{
@@ -49,7 +49,7 @@ body {
 }
 #currentBugget{
     position: relative;
-    margin: .5rem;
+    margin: 1rem;
     padding: 1rem;
     font-size: 1.6rem;
     font-family: sans-serif;
