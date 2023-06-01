@@ -2,7 +2,7 @@
 body {
     margin: 1rem 0rem 0rem 0rem;
     padding: 2rem 0rem 0rem 0rem;
-    background-color: #32B6A7;
+    background-color: #1e6d64;
 }
 button {
     appearance: none;
@@ -78,6 +78,10 @@ button {
 }
 .top-right{
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     margin: 0rem 3rem 0rem 0rem;
     padding: 0rem;
     color: #ffffff;
