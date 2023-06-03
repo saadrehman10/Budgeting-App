@@ -1,7 +1,7 @@
 
 body {
-    margin: 1em 0em 0em 0em;
-    padding: 2em 0em 0em 0em;
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 2rem 0rem 0rem 0rem;
     background-color: #1e6d64;
 }
 
@@ -18,21 +18,21 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0em;
+    border-radius: 0rem;
     background: linear-gradient(315deg, #223f4b, #294b59);
-    box-shadow:  -2.25em -2.25em 4.438em #1b313a, 2.25em 2.25em 4.438em #315b6c;
+    box-shadow:  -2.25rem -2.25rem 4.438rem #1b313a, 2.25rem 2.25rem 4.438rem #315b6c;
 }
 .top-left{
     position: relative;
-    margin: -3em 0em -3em 2em;
-    padding: 0.3em 2em 0.3em 2em;
-    font-size: 1.8em;
+    margin: -3rem 0rem -3rem 2rem;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    font-size: 1.8rem;
     font-family:  "Segoe UI",Helvetica,Arial,sans-serif;
     color: #ffffff;
-    text-shadow: 0em 0em 2em #000000;
-    border-radius: 1em;
+    text-shadow: 0rem 0rem 2rem #000000;
+    border-radius: 1rem;
     background: linear-gradient(145deg, #223f4b, #294b59);
-    box-shadow:  1.125em 1.125em 2.25em #101d23,-1.125em -1.125em 2.25em #3c6f83;
+    box-shadow:  1.125rem 1.125rem 2.25rem #101d23,-1.125rem -1.125rem 2.25rem #3c6f83;
     
 }
 .top-right{
@@ -41,21 +41,21 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 0em 3em 0em 0em;
-    padding: 0em;
+    margin: 0rem 3rem 0rem 0rem;
+    padding: 0rem;
     color: #ffffff;
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 #currentBugget{
     position: relative;
-    margin: 1em;
-    padding: 1em;
-    font-size: 1.6em;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     color: #ffffff;
-    text-shadow: 0em 0em 4em #000000;
+    text-shadow: 0rem 0rem 4rem #000000;
 
 
 }
@@ -64,16 +64,16 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 3em;
-    width: 65em ;
-    padding: 2em;
-    margin: 8em 5em 5em 5em;
+    height: 3rem;
+    width: 65rem ;
+    padding: 2rem;
+    margin: 8rem 5rem 5rem 5rem;
     border-radius: 7px;
     background: #223f4b;
     box-shadow: inset 41px 41px 69px #172a32, inset -41px -41px 69px #2d5464, 41px 41px 69px #172a32;
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     color: #ffffff;
-    text-shadow: 0em 0em 4em #000000;
+    text-shadow: 0rem 0rem 4rem #000000;
 
 }
 .addExpenceInput{
@@ -91,8 +91,8 @@ body {
   background: #e8e8e8;  
   display: block;
   box-sizing: border-box;
-  border-radius: 0.5em;
-  padding: 0.5em 1.5em;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
   color: #000000;
   transform: translateY(-0.2em);
   transition: transform 0.1s ease;
