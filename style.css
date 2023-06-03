@@ -4,48 +4,7 @@ body {
     padding: 2rem 0rem 0rem 0rem;
     background-color: #1e6d64;
 }
-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-family:"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-   }
-   
-   button:disabled {
-    pointer-events: none;
-   }
-   
-   button:hover {
-    color: #fff;
-    background-color: #223f4b;
-    box-shadow: #000000 0 8px 15px;
-    border: none;
-    transform: translateY(-2px);
-   }
-   
-   button:active {
-    box-shadow: none;
-    transform: translateY(0);
-   }
+
 .main{
     position: relative;
     display: flex;
@@ -88,17 +47,7 @@ button {
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     font-size: 1rem;
 }
-#middleButtons{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-items: space-evenly;
-    align-items: center;
-    margin:  3rem 0rem 0rem 43rem;
-    padding: 3rem 1rem 1rem 8rem; ;  
-    width: 25rem;
 
-}
 #currentBugget{
     position: relative;
     margin: 1rem;
@@ -109,4 +58,25 @@ button {
     text-shadow: 0rem 0rem 4rem #000000;
 
 
+}
+.addExpence{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 3rem;
+    width: 65rem ;
+    padding: 2rem;
+    margin: 8rem 5rem 5rem 5rem;
+    border-radius: 7px;
+    background: #223f4b;
+    box-shadow: inset 41px 41px 69px #172a32, inset -41px -41px 69px #2d5464, 41px 41px 69px #172a32;
+
+}
+.addExpenceInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+ 
 }
