@@ -64,7 +64,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 3rem;
+    height: 15rem;
     width: 65rem ;
     padding: 2rem;
     margin: 8rem 5rem 5rem 5rem;
@@ -77,29 +77,62 @@ body {
 
 }
 .addExpenceInput{
-    width: 50% ;
+    width: 100% ;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
  
 }
+.addExpenceInputAtt{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 110%;
+}
 .addExpenceButton{
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
-  background: #e8e8e8;  
+  background: #1e6d64;  
   display: block;
   box-sizing: border-box;
   border-radius: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  color: #000000;
+  margin: 0.5rem 0rem 1rem 90%;
+  padding: 0.6rem 1.7rem;
+  color: #ffffff;
   transform: translateY(-0.2em);
   transition: transform 0.1s ease;
+  z-index: 1;
 }
 .addExpenceButton:hover{
-    transform: translateY(-0.33em);
+    transform: translateY(-0.40em);
 }
 .addExpenceButton:active{
     transform: translateY(0);
+    background-color: #0b2724;
+}
+.balanceButton{
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background: #1e6d64;  
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  margin: 0rem;
+  padding: 0.6rem 1.7rem;
+  color: #ffffff;
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  z-index: 1;
+}
+.balanceButton:hover{
+    transform: translateY(-0.40em);
+}
+.balanceButton:active{
+    transform: translateY(0);
+    background-color: #0b2724;
 }
