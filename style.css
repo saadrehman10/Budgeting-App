@@ -177,10 +177,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     width: 120%;
 }
 .listInlistdez{
+
     position: relative;
     width: 100%;
     padding: .8rem;

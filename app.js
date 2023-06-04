@@ -11,6 +11,7 @@ function balanceAdd(){
      }
 }
 let expencesList = [];
+
 function addExpences(){
     let sele = document.getElementById("selector1").value;
     let amt = +document.getElementById("Amount").value;
@@ -34,14 +35,29 @@ function showExpences(){
          `<li class="expencesView">
           ${expencesList.indexOf(expence) + 1}.
           <ul class="listInList">
-            <li class="listInlistdez">Catagory: ${expence.sele}</li>
-            <li class="listInlistdez">Amount: Rs. ${expence.amt}</li>
-            <li class="listInlistdez">Date: ${expence.date}</li>
-            <li class="listInlistdez">Description: ${expence.desc}</li>
+            <li class="listInlistdez">Catagory : <hr> ${expence.sele}</li>
+            <li class="listInlistdez">Amount : <hr>Rs. -${expence.amt}</li>
+            <li class="listInlistdez">Date : <hr>${expence.date}</li>
+            <li class="listInlistdez">Description : <hr>${expence.desc}</li>
           <ul> 
+          <button class="deleteBtn" onclick="deleteExpence(${expencesList.indexOf(expence)})">Delete</button>
           </li>`;
       });
    }
+function deleteExpence(index){
+      expencesList.splice(index, 1);
+      showExpences();
+}   
+
 function calculate(){
-    
+    let currentBalance = +currentBugget.innerHTML.slice(4);
+    expencesList.forEach((expence) => { currentBalance -= expence.amt; });
+    if (currentBalance < 0){
+         alert("You are out of money");
+         
+      }
+      else{
+         currentBugget.innerHTML = `Rs. ${currentBalance}`;
+      
+      }
 }
