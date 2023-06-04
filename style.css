@@ -196,9 +196,9 @@ body {
 .overviewLi{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 50%;
+
     
 
 }
@@ -210,7 +210,7 @@ body {
     position: relative;
     width: 30%;
     margin: 7rem 1rem .5rem 7rem;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
     border-radius: 1rem;
     background: linear-gradient(145deg, #223f4b, #294b59);
     box-shadow:  1.125rem 1.125rem 2.25rem #101d23,-1.125rem -1.125rem 2.25rem #3c6f83;

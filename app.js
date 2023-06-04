@@ -32,6 +32,7 @@ function balanceAdd(){
          alert("Okay");
       }
    }  
+   overViewCal();
 }
 
 
@@ -49,6 +50,7 @@ function addExpences(){
       let val = calculate(amt);
       if (val === true){
          expencesList.push(expence);
+         overViewCalDebit();
          showExpences();
           }
       }
@@ -76,6 +78,7 @@ function deleteExpence(index){
    currentBalance += expencesList[index].amt
    currentBugget.innerHTML = `Rs. ${currentBalance}`;
    expencesList.splice(index, 1);
+   overViewCalDebit();
    showExpences();
    
 }   
@@ -92,4 +95,19 @@ function calculate(amounts){
          currentBugget.innerHTML = `Rs. ${currentBalance}`;
          return true;
       }
+}
+function overViewCal(){
+   let sum = 0;
+      for (let i = 0; i < incomeList.length; i++){
+         sum += incomeList[i];
+      }
+      totalCredit.innerHTML = `Rs. ${sum}`;
+}
+function overViewCalDebit(){
+   let sum = 0;
+      for (let i = 0; i < expencesList.length; i++){
+         sum += expencesList[i].amt;
+      }
+      totalDebit.innerHTML = `Rs. ${sum}`;
+
 }
