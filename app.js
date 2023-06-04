@@ -1,3 +1,4 @@
+alert("Welcome to the Budget App\nAdd balance to start");
 let expencesList = [];
 let incomeList = [];
 function balanceAdd(){
@@ -105,9 +106,9 @@ function overViewCal(){
 }
 function overViewCalDebit(){
    let sum = 0;
-      for (let i = 0; i < expencesList.length; i++){
-         sum += expencesList[i].amt;
-      }
-      totalDebit.innerHTML = `Rs. ${sum}`;
-
+   for (let i = 0; i < expencesList.length; i++){
+      sum += expencesList[i].amt;
+   }
+   totalDebit.innerHTML = `Rs. -${sum}`;
+   
 }
