@@ -1,16 +1,39 @@
+let expencesList = [];
+let incomeList = [];
 function balanceAdd(){
+   let currentBalance = +currentBugget.innerHTML.slice(4);
+   if (currentBalance === 0){
+   
      let balance = +prompt("Enter the amount you want to add to your balance,\nShould be less than 999999999");
      console.log(balance);
      if( typeof(balance) === "number" && balance > 0 && balance <= 999999999){
         currentBugget.innerHTML = `Rs. ${balance}`;
+        incomeList.push(balance);
      }
      else{
         currentBugget.innerHTML = "Rs. 0";
         alert("Please enter a valid amount");
         location.reload();
-     }
+     }}
+   else if (currentBalance > 0){
+      let dec = prompt("You already have a balance\nWant to add more? [y/n]");
+      if (dec === "y"){
+         let balance = +prompt("Enter the amount you want to add to your balance,\nShould be less than 999999999");
+         if( typeof(balance) === "number" && balance > 0 && balance <= 999999999){
+            currentBugget.innerHTML = `Rs. ${currentBalance+balance}`;
+            incomeList.push(balance);
+         }
+         else{
+            alert("Please enter a valid amount");
+            
+         }
+      }
+      else if (dec === "n"){
+         alert("Okay");
+      }
+   }  
 }
-let expencesList = [];
+
 
 function addExpences(){
     let sele = document.getElementById("selector1").value;
@@ -44,7 +67,7 @@ function showExpences(){
             <li class="listInlistdez">Date : <hr>${expence.date}</li>
             <li class="listInlistdez">Description : <hr>${expence.desc}</li>
           <ul> 
-          <button class="deleteBtn" onclick="deleteExpence(${expencesList.indexOf(expence)})">Delete</button>
+          <button class="balanceButton" onclick="deleteExpence(${expencesList.indexOf(expence)})">Delete</button>
           </li>`;
       });
    }
