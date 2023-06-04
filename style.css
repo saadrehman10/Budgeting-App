@@ -137,19 +137,59 @@ body {
     background-color: #0b2724;
 }
 .expencesView{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 
     height: 5rem;
-    width: 67rem ;
+    width: 60rem ;
     padding: 1rem;
     margin: 2rem 5rem 5rem 5rem;
     border-radius: 7px;
     background: #223f4b;
     box-shadow: inset 41px 41px 69px #172a32, inset -41px -41px 69px #2d5464, 41px 41px 69px #172a32;
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight: 700;
     color: #ffffff;
     text-shadow: 0rem 0rem 4rem #000000;
 
 }
 .listExpences{
     list-style: none;
+}
+.ExpenceHeading{
+    position: relative;
+    width: 20%;
+    margin: 1rem 1rem 4rem 6rem;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 3rem;
+    font-family:  "Segoe UI",Helvetica,Arial,sans-serif;
+    color: #ffffff;
+    text-shadow: 0rem 0rem 2rem #000000;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #223f4b, #294b59);
+    box-shadow:  1.125rem 1.125rem 2.25rem #101d23,-1.125rem -1.125rem 2.25rem #3c6f83;
+}
+.listInList{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 120%;
+}
+.listInlistdez{
+    position: relative;
+    width: 100%;
+    padding: .8rem;
+    margin: 1rem;
+    font-size: 1rem;
+    font-family:  "Segoe UI",Helvetica,Arial,sans-serif;
+    color: #ffffff;
+    text-shadow: 0rem 0rem 2rem #000000;
+    border-radius: .2rem;
+    background: linear-gradient(145deg, #4c8aa5, #294b59);
+
 }

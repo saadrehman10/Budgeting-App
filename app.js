@@ -23,20 +23,25 @@ function addExpences(){
     else{
       let expence = { sele, amt, date, desc };
       expencesList.push(expence);
-      console.log(expence);
-      console.log(expencesList);
+      showExpences();
    }
 }
 function showExpences(){
-      let expences = document.getElementById("expences");
+      let expences = document.getElementById("listExpences");
       expences.innerHTML = "";
       expencesList.forEach((expence) => {
-         expences.innerHTML += `<tr>
-         <td>${expence.sele}</td>
-         <td>${expence.amt}</td>
-         <td>${expence.date}</td>
-         <td>${expence.desc}</td>
-         </tr>`;
+         expences.innerHTML += 
+         `<li class="expencesView">
+          ${expencesList.indexOf(expence) + 1}.
+          <ul class="listInList">
+            <li class="listInlistdez">Catagory: ${expence.sele}</li>
+            <li class="listInlistdez">Amount: Rs. ${expence.amt}</li>
+            <li class="listInlistdez">Date: ${expence.date}</li>
+            <li class="listInlistdez">Description: ${expence.desc}</li>
+          <ul> 
+          </li>`;
       });
    }
-   
+function calculate(){
+    
+}
