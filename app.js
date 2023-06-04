@@ -23,9 +23,13 @@ function addExpences(){
     }
     else{
       let expence = { sele, amt, date, desc };
-      expencesList.push(expence);
-      showExpences();
-   }
+      let val = calculate(amt);
+      if (val === true){
+         expencesList.push(expence);
+         showExpences();
+          }
+      }
+      
 }
 function showExpences(){
       let expences = document.getElementById("listExpences");
@@ -45,19 +49,24 @@ function showExpences(){
       });
    }
 function deleteExpence(index){
-      expencesList.splice(index, 1);
-      showExpences();
+   let currentBalance = +currentBugget.innerHTML.slice(4);
+   currentBalance += expencesList[index].amt
+   currentBugget.innerHTML = `Rs. ${currentBalance}`;
+   expencesList.splice(index, 1);
+   showExpences();
+   
 }   
 
-function calculate(){
+function calculate(amounts){
     let currentBalance = +currentBugget.innerHTML.slice(4);
-    expencesList.forEach((expence) => { currentBalance -= expence.amt; });
+      currentBalance -= amounts;
+
     if (currentBalance < 0){
-         alert("You are out of money");
-         
+         alert("Insufficient funds");
+         return false;
       }
-      else{
+      else {
          currentBugget.innerHTML = `Rs. ${currentBalance}`;
-      
+         return true;
       }
 }
