@@ -27,3 +27,16 @@ function addExpences(){
       console.log(expencesList);
    }
 }
+function showExpences(){
+      let expences = document.getElementById("expences");
+      expences.innerHTML = "";
+      expencesList.forEach((expence) => {
+         expences.innerHTML += `<tr>
+         <td>${expence.sele}</td>
+         <td>${expence.amt}</td>
+         <td>${expence.date}</td>
+         <td>${expence.desc}</td>
+         </tr>`;
+      });
+   }
+   

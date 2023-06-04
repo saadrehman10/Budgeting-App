@@ -136,3 +136,20 @@ body {
     transform: translateY(0);
     background-color: #0b2724;
 }
+.expencesView{
+
+    height: 5rem;
+    width: 67rem ;
+    padding: 1rem;
+    margin: 2rem 5rem 5rem 5rem;
+    border-radius: 7px;
+    background: #223f4b;
+    box-shadow: inset 41px 41px 69px #172a32, inset -41px -41px 69px #2d5464, 41px 41px 69px #172a32;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    color: #ffffff;
+    text-shadow: 0rem 0rem 4rem #000000;
+
+}
+.listExpences{
+    list-style: none;
+}
