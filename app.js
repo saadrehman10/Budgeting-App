@@ -51,8 +51,13 @@ function addExpences(){
       let val = calculate(amt);
       if (val === true){
          expencesList.push(expence);
+         expenceAndUpdate.innerHTML = "Add Expence";
          overViewCalDebit();
          showExpences();
+         Amount.value = " ";
+         date.value = "dd/mm/yyyy";  
+         description.value = " ";
+         document.getElementById("selector1").value = "Select";
           }
       }
       
@@ -117,6 +122,14 @@ function overViewCalDebit(){
 }
 function updateExpence(index){
    let sele = expencesList[index];
+   expenceAndUpdate.innerHTML = "Update Expence";
+   Amount.value = sele.amt;
+   date.value = sele.date;
+   description.value = sele.desc;
+   document.getElementById("selector1").value = sele.sele;
+   deleteExpence(index);
+   overViewCalDebit();
+   showExpences();
    
 }
 
