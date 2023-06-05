@@ -1,4 +1,4 @@
-alert("Welcome to the Budget App\nAdd balance to start");
+/* alert("Welcome to the Budget App\nAdd balance to start"); */
 let expencesList = [];
 let incomeList = [];
 function balanceAdd(){
@@ -66,11 +66,14 @@ function showExpences(){
           ${expencesList.indexOf(expence) + 1}.
           <ul class="listInList">
             <li class="listInlistdez">Catagory : <hr> ${expence.sele}</li>
-            <li class="listInlistdez">Amount : <hr>Rs. -${expence.amt}</li>
+            <li class="listInlistdez">Amount : <hr>Rs. - ${expence.amt}</li>
             <li class="listInlistdez">Date : <hr>${expence.date}</li>
             <li class="listInlistdez">Description : <hr>${expence.desc}</li>
-          <ul> 
-          <button class="balanceButton" onclick="deleteExpence(${expencesList.indexOf(expence)})">Delete</button>
+          </ul> 
+          <div class="viewExpButtons">
+            <button class="balanceButton" onclick="deleteExpence(${expencesList.indexOf(expence)})">Delete</button>
+            <button class="balanceButton" onclick="updateExpence(${expencesList.indexOf(expence)})">Update</button>
+         </div>
           </li>`;
       });
    }
@@ -110,5 +113,9 @@ function overViewCalDebit(){
       sum += expencesList[i].amt;
    }
    totalDebit.innerHTML = `Rs. -${sum}`;
+   
+}
+function updateExpence(index){
+   let sele = expencesList[index];
    
 }
