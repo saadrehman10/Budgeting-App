@@ -5,9 +5,9 @@ function balanceAdd(){
    let currentBalance = +currentBugget.innerHTML.slice(4);
    if (currentBalance === 0){
    
-     let balance = +prompt("Enter the amount you want to add to your balance,\nShould be less than 999999999");
+     let balance = +prompt("Enter the amount you want to add to your balance,\nShould be less than 1 billion");
      console.log(balance);
-     if( typeof(balance) === "number" && balance > 0 && balance <= 999999999){
+     if( typeof(balance) === "number" && balance > 0 && balance <= 1000000000){
         currentBugget.innerHTML = `Rs. ${balance}`;
         incomeList.push(balance);
      }
@@ -112,10 +112,29 @@ function overViewCalDebit(){
    for (let i = 0; i < expencesList.length; i++){
       sum += expencesList[i].amt;
    }
-   totalDebit.innerHTML = `Rs. -${sum}`;
+   totalDebit.innerHTML = `Rs. - ${sum}`;
    
 }
 function updateExpence(index){
    let sele = expencesList[index];
    
 }
+
+function commaFormat(number) {
+   const strNumber = String(number);
+   const parts = [];
+   let groupSize = 3;
+ 
+   if (strNumber.length > 6 && strNumber.length <= 9) {
+     groupSize = 2;
+   } else if (strNumber.length > 9) {
+     groupSize = 3;
+   }
+ 
+   for (let i = strNumber.length - groupSize, j = 0; i >= 0; i -= groupSize, j++) {
+     const digits = strNumber.slice(Math.max(i - groupSize + 1, 0), i + 1);
+     parts.unshift(digits);
+   }
+ 
+   return parts.join(",");
+ }
