@@ -1,4 +1,4 @@
-/* alert("Welcome to the Budget App\nAdd balance to start"); */
+alert("Welcome to the Budget App\nAdd balance to start.\nIf you want to reset the app, refresh the page");
 let expencesList = [];
 let incomeList = [];
 function balanceAdd(){
