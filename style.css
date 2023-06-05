@@ -59,7 +59,7 @@ body {
 
 
 }
-.addExpence{
+.addExpense{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -75,7 +75,7 @@ body {
     text-shadow: 0rem 0rem 4rem #000000;
 
 }
-.addExpenceInput{
+.addExpenseInput{
     width: 100% ;
     display: flex;
     flex-direction: row;
@@ -83,7 +83,7 @@ body {
     align-items: center;
  
 }
-.addExpenceInputAtt{
+.addExpenseInputAtt{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ body {
     align-items: center;
     width: 110%;
 }
-.addExpenceButton{
+.addExpenseButton{
   font-size: 1rem;
   font-weight: bold;
   border: none;
@@ -106,10 +106,10 @@ body {
   transition: transform 0.1s ease;
   z-index: 1;
 }
-.addExpenceButton:hover{
+.addExpenseButton:hover{
     transform: translateY(-0.40em);
 }
-.addExpenceButton:active{
+.addExpenseButton:active{
     transform: translateY(0);
     background-color: #0b2724;
 }
@@ -135,7 +135,7 @@ body {
     transform: translateY(0);
     background-color: #0b2724;
 }
-.expencesView{
+.ExpensesView{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -153,10 +153,10 @@ body {
     text-shadow: 0rem 0rem 4rem #000000;
 
 }
-.listExpences{
+.listExpenses{
     list-style: none;
 }
-.ExpenceHeading{
+.ExpenseHeading{
     position: relative;
     width: 20%;
     margin: 1rem 1rem 4rem 6rem;

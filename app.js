@@ -1,5 +1,5 @@
 alert("Welcome to the Budget App\nAdd balance to start.\nIf you want to reset the app, refresh the page");
-let expencesList = [];
+let ExpensesList = [];
 let incomeList = [];
 function balanceAdd(){
    let currentBalance = +currentBugget.innerHTML.slice(4);
@@ -37,7 +37,7 @@ function balanceAdd(){
 }
 
 
-function addExpences(){
+function addExpenses(){
     let sele = document.getElementById("selector1").value;
     let amt = +document.getElementById("Amount").value;
     let date = document.getElementById("date").value;
@@ -47,13 +47,13 @@ function addExpences(){
 
     }
     else{
-      let expence = { sele, amt, date, desc };
+      let Expense = { sele, amt, date, desc };
       let val = calculate(amt);
       if (val === true){
-         expencesList.push(expence);
-         expenceAndUpdate.innerHTML = "Add Expence";
+         ExpensesList.push(Expense);
+         ExpenseAndUpdate.innerHTML = "Add Expense";
          overViewCalDebit();
-         showExpences();
+         showExpenses();
          Amount.value = " ";
          date.value = "dd/mm/yyyy";  
          description.value = " ";
@@ -62,33 +62,33 @@ function addExpences(){
       }
       
 }
-function showExpences(){
-      let expences = document.getElementById("listExpences");
-      expences.innerHTML = "";
-      expencesList.forEach((expence) => {
-         expences.innerHTML += 
-         `<li class="expencesView">
-          ${expencesList.indexOf(expence) + 1}.
+function showExpenses(){
+      let Expenses = document.getElementById("listExpenses");
+      Expenses.innerHTML = "";
+      ExpensesList.forEach((Expense) => {
+         Expenses.innerHTML += 
+         `<li class="ExpensesView">
+          ${ExpensesList.indexOf(Expense) + 1}.
           <ul class="listInList">
-            <li class="listInlistdez">Catagory : <hr> ${expence.sele}</li>
-            <li class="listInlistdez">Amount : <hr>Rs. - ${expence.amt}</li>
-            <li class="listInlistdez">Date : <hr>${expence.date}</li>
-            <li class="listInlistdez">Description : <hr>${expence.desc}</li>
+            <li class="listInlistdez">Catagory : <hr> ${Expense.sele}</li>
+            <li class="listInlistdez">Amount : <hr>Rs. - ${Expense.amt}</li>
+            <li class="listInlistdez">Date : <hr>${Expense.date}</li>
+            <li class="listInlistdez">Description : <hr>${Expense.desc}</li>
           </ul> 
           <div class="viewExpButtons">
-            <button class="balanceButton" onclick="deleteExpence(${expencesList.indexOf(expence)})">Delete</button>
-            <button class="balanceButton" onclick="updateExpence(${expencesList.indexOf(expence)})">Update</button>
+            <button class="balanceButton" onclick="deleteExpense(${ExpensesList.indexOf(Expense)})">Delete</button>
+            <button class="balanceButton" onclick="updateExpense(${ExpensesList.indexOf(Expense)})">Update</button>
          </div>
           </li>`;
       });
    }
-function deleteExpence(index){
+function deleteExpense(index){
    let currentBalance = +currentBugget.innerHTML.slice(4);
-   currentBalance += expencesList[index].amt
+   currentBalance += ExpensesList[index].amt
    currentBugget.innerHTML = `Rs. ${currentBalance}`;
-   expencesList.splice(index, 1);
+   ExpensesList.splice(index, 1);
    overViewCalDebit();
-   showExpences();
+   showExpenses();
    
 }   
 
@@ -114,22 +114,22 @@ function overViewCal(){
 }
 function overViewCalDebit(){
    let sum = 0;
-   for (let i = 0; i < expencesList.length; i++){
-      sum += expencesList[i].amt;
+   for (let i = 0; i < ExpensesList.length; i++){
+      sum += ExpensesList[i].amt;
    }
    totalDebit.innerHTML = `Rs. - ${sum}`;
    
 }
-function updateExpence(index){
-   let sele = expencesList[index];
-   expenceAndUpdate.innerHTML = "Update Expence";
+function updateExpense(index){
+   let sele = ExpensesList[index];
+   ExpenseAndUpdate.innerHTML = "Update Expense";
    Amount.value = sele.amt;
    date.value = sele.date;
    description.value = sele.desc;
    document.getElementById("selector1").value = sele.sele;
-   deleteExpence(index);
+   deleteExpense(index);
    overViewCalDebit();
-   showExpences();
+   showExpenses();
    
 }
 
